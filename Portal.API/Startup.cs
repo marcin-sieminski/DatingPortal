@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Portal.API.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Portal.API
 {
@@ -25,6 +27,7 @@ namespace Portal.API
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DataContext>(x => x.UseSqlite("ConnectionString"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
