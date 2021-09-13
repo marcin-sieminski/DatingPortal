@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Portal.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/value")]
     [ApiController]
     public class ValueController : ControllerBase
     {
