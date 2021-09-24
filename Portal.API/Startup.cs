@@ -14,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using Portal.API.Data;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Portal.API
 {
     public class Startup
@@ -33,10 +34,23 @@ namespace Portal.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Portal.API", Version = "v1" });
             });
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder
+                            .AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
