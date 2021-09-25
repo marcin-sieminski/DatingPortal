@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\DatingPortal\\portal.api\\Portal.API.csproj": {}
+    "C:\\repos\\DatingPortal\\Portal.API\\Portal.API.csproj": {}
   },
   "projects": {
-    "C:\\repos\\DatingPortal\\portal.api\\Portal.API.csproj": {
+    "C:\\repos\\DatingPortal\\Portal.API\\Portal.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\DatingPortal\\portal.api\\Portal.API.csproj",
+        "projectUniqueName": "C:\\repos\\DatingPortal\\Portal.API\\Portal.API.csproj",
         "projectName": "Portal.API",
-        "projectPath": "C:\\repos\\DatingPortal\\portal.api\\Portal.API.csproj",
+        "projectPath": "C:\\repos\\DatingPortal\\Portal.API\\Portal.API.csproj",
         "packagesPath": "C:\\Users\\mrcn\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\DatingPortal\\portal.api\\obj\\",
+        "outputPath": "C:\\repos\\DatingPortal\\Portal.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
