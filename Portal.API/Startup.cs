@@ -45,6 +45,7 @@ namespace Portal.API
                             .AllowAnyMethod();
                     });
             });
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
