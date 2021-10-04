@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Portal.API.Data;
+using Portal.API.Dtos;
 using Portal.API.Models;
 using System.Threading.Tasks;
 
 namespace Portal.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -16,17 +17,17 @@ namespace Portal.API.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(string username, string password)
+        public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
-            username = username.ToLower();
-            if (await _repository.UserExists(username))
+            userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
+            if (await _repository.UserExists(userForRegisterDto.Username))
             {
                 return BadRequest("U¿ytkownik o takiej nazwie istnieje.");
             }
 
-            var userToCreate = new User(){Username = username};
-            var createdUser = await _repository.Register(userToCreate, password);
-            return StatusCode(201);
+            var userToCreate = new User(){Username = userForRegisterDto.Username};
+            var createdUser = await _repository.Register(userToCreate, userForRegisterDto.Password);
+            return Ok(createdUser);
         }
     }
 }

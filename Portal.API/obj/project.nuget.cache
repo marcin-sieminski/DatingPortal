@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oHryiAQ7M24lcxLGykNysu8rxCz1QRsUES8w4Cdje4JfI/cBUWaviTHIyhkeypbyWTIdew+5QUAeJu9N1Rcw4Q==",
+  "dgSpecHash": "SnX1Wu+NmrSs2VZm6T9LESB80KGKfAGIS62dBtV7RpQTAdY0PtAID80VxZlqGBgIEGCewqoas02JuScJw2q0RQ==",
   "success": true,
-  "projectFilePath": "C:\\repos\\DatingPortal\\Portal.API\\Portal.API.csproj",
+  "projectFilePath": "C:\\repos\\Portal\\Portal.API\\Portal.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrcn\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mrcn\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
