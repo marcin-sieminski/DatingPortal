@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Portal.API.Data;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Portal.API.Controllers
 {
-    [Route("api/value")]
+    [Authorize]
+    [Route("api/values")]
     [ApiController]
     public class ValueController : ControllerBase
     {
@@ -24,6 +26,7 @@ namespace Portal.API.Controllers
             return Ok(values);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {
