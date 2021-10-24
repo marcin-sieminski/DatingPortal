@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yLvQxFOKIjVwp1e/pp96OUYJNKLK6NPllSbF0SG3QzxA7v+eERm4+9owZEBV/NoNGEJOkhLotzCGjRnsqfcAOg==",
+  "dgSpecHash": "nlfEVPpx+6vYE9/DUAmJ4hb+ZQxsXe4z/BGyrYuif8oOFeND1usw9fbJcysRiMhTZyNTXThjM8xkrwMQHi1mJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mrcn\\OneDrive\\Documents\\C#\\Portal\\Portal.API\\Portal.API.csproj",
+  "projectFilePath": "C:\\Users\\mrcn\\source\\Portal\\Portal.API\\Portal.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrcn\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mrcn\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.11\\microsoft.aspnetcore.authentication.jwtbearer.5.0.11.nupkg.sha512",
