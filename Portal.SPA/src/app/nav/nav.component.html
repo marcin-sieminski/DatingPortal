@@ -16,10 +16,10 @@
           <a class="nav-link" href="#">Messages</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="user" placeholder="User" aria-label="User">
-        <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
-        <button class="btn btn-outline-success" type="submit">Login</button>
+      <form #loginForm="ngForm" class="d-flex" (ngSubmit)="login()">
+        <input class="form-control me-2" type="user" placeholder="User" aria-label="User" [(ngModel)]="model.username" name="username" required>
+        <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password" [(ngModel)]="model.password" name="password" required>
+        <button [disabled]="!loginForm.valid" class="btn btn-outline-success" type="submit">Login</button>
       </form>
     </div>
   </div>
