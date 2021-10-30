@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Cors;
 
 namespace Portal.API.Controllers
 {
-    [Route("api/auth")]
     [ApiController]
+    [Route("api/auth")]
+    [EnableCors("AllowedOrigins")]
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _repository;
@@ -31,7 +33,7 @@ namespace Portal.API.Controllers
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
             if (await _repository.UserExists(userForRegisterDto.Username))
             {
-                return BadRequest("U¿ytkownik o takiej nazwie istnieje.");
+                return BadRequest("UÅ¼ytkownik o takiej nazwie istnieje.");
             }
 
             var userToCreate = new User() { Username = userForRegisterDto.Username };
