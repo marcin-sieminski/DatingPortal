@@ -16,6 +16,17 @@
           <a class="nav-link" href="#">Messages</a>
         </li>
       </ul>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+      
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
       <form #loginForm="ngForm" class="d-flex" (ngSubmit)="login()">
         <input class="form-control me-2" type="user" placeholder="User" aria-label="User" [(ngModel)]="model.username" name="username" required>
         <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password" [(ngModel)]="model.password" name="password" required>
