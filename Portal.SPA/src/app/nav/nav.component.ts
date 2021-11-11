@@ -1,3 +1,4 @@
+import { TypeScriptEmitter } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { AlertifyService } from '../_services/alertify.service';
 import { AuthService } from '../_services/auth.service';
@@ -25,9 +26,7 @@ export class NavComponent implements OnInit {
   }
 
   loggedIn() {
-    this.alertify.success('Logged in');
-    const token = localStorage.getItem('token');
-    return !!token;
+    return this.authService.loggedIn();
   }
 
   logout() {
