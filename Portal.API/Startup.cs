@@ -46,10 +46,14 @@ namespace Portal.API
                 ValidateIssuer = false,
                 ValidateAudience = false
             });
+            
+            services.AddTransient<Seed>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Seed seeder)
         {
+            seeder.SeedDatabase();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

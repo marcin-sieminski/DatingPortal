@@ -53,7 +53,7 @@ namespace Portal.API.Data
         }
         #endregion
 
-        #region method privat
+        #region method private
         private void CreatePasswordHashSalt(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512())
