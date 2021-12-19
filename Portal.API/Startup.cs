@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Portal.API.Data;
+using Portal.API.Mappings;
 using System.Text;
 
 namespace Portal.API;
@@ -29,7 +30,6 @@ public class Startup
                         .AllowAnyMethod();
                 });
         });
-
         services.AddDbContext<DataContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -48,6 +48,7 @@ public class Startup
         });
         services.AddScoped<IGenericRepository, GenericRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddAutoMapper(typeof(UserProfile).Assembly);
         services.AddTransient<Seed>();
     }
 

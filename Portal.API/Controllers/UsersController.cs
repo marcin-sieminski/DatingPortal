@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portal.API.Data;
+using Portal.API.Dtos;
 using System.Threading.Tasks;
 
 namespace Portal.API.Controllers;
@@ -11,21 +13,27 @@ namespace Portal.API.Controllers;
 public class UsersController : ControllerBase
 {
     private readonly IUserRepository _repo;
+    private readonly IMapper _mapper;
 
-    public UsersController(IUserRepository repo)
+    public UsersController(IUserRepository repo, IMapper mapper)
     {
         _repo = repo;
+        _mapper = mapper;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetUsers()
     {
-        return Ok(await _repo.GetUsers());
+        var users = await _repo.GetUsers();
+        var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
+        return Ok(usersToReturn);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetUser(int id)
     {
-        return Ok(await _repo.GetUser(id));
+        var user = await _repo.GetUser(id);
+        var userToReturn = _mapper.Map<UserForDetailedDto>(user);
+        return Ok(userToReturn);
     }
 }
