@@ -1,6 +1,4 @@
-﻿using Portal.API.Models;
-
-namespace Portal.API.Dtos;
+﻿namespace Portal.API.Dtos;
 
 public class UserForDetailedDto
 {
@@ -40,6 +38,6 @@ public class UserForDetailedDto
     public string ItFeelsBestIn { get; set; }
     public string FriendsWouldDescribeMe { get; set; }
 
-    public ICollection<Photo> Photos { get; set; }
+    public ICollection<PhotoForDetailedDto> Photos { get; set; }
     public string PhotoUrl { get; set; }
 }

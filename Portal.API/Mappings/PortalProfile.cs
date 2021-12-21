@@ -4,11 +4,12 @@ using Portal.API.Models;
 
 namespace Portal.API.Mappings;
 
-public class UserProfile : Profile
+public class PortalProfile : Profile
 {
-    public UserProfile()
+    public PortalProfile()
     {
         CreateMap<User, UserForListDto>();
         CreateMap<User, UserForDetailedDto>();
+        CreateMap<Photo, PhotoForDetailedDto>();
     }
 }

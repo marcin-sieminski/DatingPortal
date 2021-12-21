@@ -48,7 +48,7 @@ public class Startup
         });
         services.AddScoped<IGenericRepository, GenericRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
-        services.AddAutoMapper(typeof(UserProfile).Assembly);
+        services.AddAutoMapper(typeof(PortalProfile).Assembly);
         services.AddTransient<Seed>();
     }
 

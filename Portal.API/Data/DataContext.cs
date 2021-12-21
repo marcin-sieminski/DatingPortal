@@ -7,7 +7,7 @@ namespace Portal.API.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
-        public DbSet<Photo> Photos { get; set; }
+        public DbSet<PhotoForDetailedDto> Photos { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<User>()
