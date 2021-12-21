@@ -41,5 +41,5 @@ public class User
     public string ItFeelsBestIn { get; set; }
     public string FriendsWouldDescribeMe { get; set; }
 
-    public ICollection<PhotoForDetailedDto> Photos { get; set; }
+    public ICollection<Photo> Photos { get; set; }
 }
